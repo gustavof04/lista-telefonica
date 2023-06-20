@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro de Contatos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            Livro de contatos
+            <img src="images/phonebook.png" width="64" height="64"/>
+        </h1>
+    </header>
+    <main class="container">
+
+        <!-- ADICIONAR CONTATOS -->
+        <div class="add-container">
+            <label for="name">Adicionar novo contato</label>
+            <div class="addInputs">
+                <input 
+                 type="text" 
+                 id="name"
+                 placeholder="Nome do contato"
+                 required
+                />
+                <input 
+                 type="text" 
+                 id="number"
+                 placeholder="Número do contato"
+                 required
+                />
+            </div>
+            <button
+             type="submit"
+             id="addButton"
+             onclick="addContact()"
+            >
+              Adicionar
+            </button>
+            <p id="displayNoti"></p>
+        </div>
+
+        <!-- BUSCAR CONTATOS -->
+        <div class="search-container">
+            <label for="searchContact">Busque um contato</label>
+
+            <div class="searchInputs">
+                <input 
+                 type="text" 
+                 id="searchContactName"
+                 placeholder="Nome do contato"
+                 required
+                />
+                <button 
+                 type="submit" 
+                 id="searchButton" 
+                 onclick="searchContact()"
+                >
+                  Pesquisar
+                </button>
+            </div>
+
+            <p id="displayContact"></p>
+
+            <div class="reset" onclick="reset()" >
+                Reiniciar
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

@@ -116,12 +116,6 @@ img {
     transform: rotate(20deg);
 }
 
-@media only screen and (max-width: 480px) {
-    .container {
-        margin: 10px;
-    }
-}
-
 footer {
     margin-top: 20px;
 }
@@ -129,4 +123,39 @@ footer {
 footer a {
     text-decoration: none;
     color: gray;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #addButton,
+    #searchButton {
+        width: 100%;
+    }
+
+    .reset {
+        background-color: #fcb6ee;
+        position: static;
+        margin-top: 10px;
+    }
+
+    .addInputs,
+    .searchInputs {
+        flex-direction: column;
+        align-items: inherit;
+    }
+
+    h1 {
+        font-size: 25px;
+        position: relative;
+        right: 6px;
+    }
+
+    img {
+        transform: inherit;
+    }
 }

@@ -116,15 +116,6 @@ img {
     transform: rotate(20deg);
 }
 
-footer {
-    margin-top: 20px;
-}
-
-footer a {
-    text-decoration: none;
-    color: gray;
-}
-
 @media (max-width: 480px) {
     .container {
         width: 80%;

@@ -149,7 +149,9 @@ img {
     }
 
     img {
-        transform: inherit;
+        /* transform: inherit; */
+        width: 48px;
+        height: 48px;
     }
 
     label {

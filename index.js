@@ -18,6 +18,29 @@ function addContact() {
     }, 2000);
 }
 
+// Máscara de input no formato de telefone em #number
+document.addEventListener('DOMContentLoaded', function () {
+    const numberInput = document.querySelector('#number')
+    
+    numberInput.addEventListener('input', function (e) {
+        const input = e.target;
+        const inputLength = input.value.length;
+    
+        let formattedNumber = input.value.replace(/\D/g, '').substring(0, 11);
+    
+        if (inputLength > 2) {
+            formattedNumber = `(${formattedNumber.substring(0, 2)}) ${formattedNumber.substring(2)}`;
+        }
+    
+        if (inputLength > 7) {
+            formattedNumber = `${formattedNumber.substring(0, 10)}-${formattedNumber.substring(10)}`;
+        }
+    
+        input.value = formattedNumber;
+    });
+})
+
+
 // Buscar contato
 function searchContact() {
     let displayDetail = document.querySelector('#displayContact');

@@ -38,6 +38,26 @@ document.addEventListener('DOMContentLoaded', function () {
     
         input.value = formattedNumber;
     });
+
+    numberInput.addEventListener('keydown', function (e) {
+        const key = e.key;
+        const input = e.target;
+        const inputLength = input.value.length;
+    
+        if (key === 'Backspace' && inputLength > 0) {
+            let formattedNumber = input.value.replace(/\D/g, '').substring(0, 11);
+    
+            if (inputLength === 10) {
+            formattedNumber = `${formattedNumber.substring(0, 6)}-${formattedNumber.substring(6)}`;
+            }
+    
+            if (inputLength === 3) {
+            formattedNumber = formattedNumber.substring(0, 2);
+            }
+    
+            input.value = formattedNumber;
+        }
+    });
 })
 
 

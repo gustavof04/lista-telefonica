@@ -4,6 +4,7 @@ Projeto de uma lista telefônica utilizando HTML, CSS e JavaScript puros. Esse p
 
 Com a elaboração desse projeto, aprimorei minhas habilidades em:
 * Manipulação do DOM;
+* Regex para criação de input masks;
 * Funções;
 * Estruturas condicionais;
 * Operadores lógicos;

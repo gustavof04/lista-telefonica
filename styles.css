@@ -105,6 +105,9 @@ input[type='text'] {
     cursor: pointer;
     opacity: 0.2;
 }
+.reset:hover {
+    text-decoration: underline;
+}
 
 h1 {
     display: flex;
